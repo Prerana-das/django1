@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person List</title>
+</head>
+<body>
+{% if persons %}
+{% for person in persons %}
+<div>
+    <p>Person: {{ person.id }} {{ person.name }} </p>
+    <a href="/persons/{{ person.id }}">Person Details</a>
+</div>
+{% endfor %}
+{% endif %}
+</body>
+</html>
