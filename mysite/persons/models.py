@@ -14,6 +14,7 @@ class Person(models.Model):
     age = IntegerField(null=False)
     gender = CharField(choices=genders, null=False, max_length=10)
     bio = CharField(null=False, max_length=500)
+    address =CharField(null=False, max_length=50,default="")
 
     def __str__(self):
         return "{id} {name}".format(id=self.id, name=self.name)
